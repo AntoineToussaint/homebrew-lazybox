@@ -1,20 +1,20 @@
 class Lazybox < Formula
   desc "A reactive PR inbox in your terminal."
   homepage "https://lazybox.ai"
-  version "0.1.6"
+  version "0.1.7"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/AntoineToussaint/lazybox/releases/download/v0.1.6/lazybox-tui-aarch64-apple-darwin.tar.xz"
-      sha256 "d6d7c702e37839494936c49214bd71c091c3f4ad2705980d31cbe463d4c6d82d"
+      url "https://github.com/AntoineToussaint/lazybox/releases/download/v0.1.7/lazybox-tui-aarch64-apple-darwin.tar.xz"
+      sha256 "8da9ba1aa0f8c8ea162a7a6316322074163fc62ff703376a972b89a3df8e1e01"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/AntoineToussaint/lazybox/releases/download/v0.1.6/lazybox-tui-x86_64-apple-darwin.tar.xz"
-      sha256 "d7bcfedbd259790fd5922a16404c93b5aa75972d66b7d259d1784e393baf5edd"
+      url "https://github.com/AntoineToussaint/lazybox/releases/download/v0.1.7/lazybox-tui-x86_64-apple-darwin.tar.xz"
+      sha256 "b017f2a41dbe5bfbdabc4359410077a44cb7f0f33cd98e5963d593438ae01538"
     end
   end
   if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/AntoineToussaint/lazybox/releases/download/v0.1.6/lazybox-tui-x86_64-unknown-linux-gnu.tar.xz"
-    sha256 "9fff4d6897961bc459c5a703be7262015fdba4dbb7602f3084990cbb9ac42f3a"
+    url "https://github.com/AntoineToussaint/lazybox/releases/download/v0.1.7/lazybox-tui-x86_64-unknown-linux-gnu.tar.xz"
+    sha256 "4295a36f1a7ecbc1e80baa49f7888150bf4b5e618a8636bf332549f9ab26144f"
   end
   license "MIT"
 
