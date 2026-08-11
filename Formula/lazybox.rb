@@ -1,20 +1,20 @@
 class Lazybox < Formula
-  desc "A reactive PR inbox in your terminal."
+  desc "A reactive PR inbox and agent workspace manager for the terminal."
   homepage "https://lazybox.ai"
-  version "0.1.7"
+  version "0.1.9"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/AntoineToussaint/lazybox/releases/download/v0.1.7/lazybox-tui-aarch64-apple-darwin.tar.xz"
-      sha256 "8da9ba1aa0f8c8ea162a7a6316322074163fc62ff703376a972b89a3df8e1e01"
+      url "https://github.com/AntoineToussaint/lazybox/releases/download/v0.1.9/lazybox-tui-boot-aarch64-apple-darwin.tar.xz"
+      sha256 "bfa7f7a9fcc180a32511f742c47a1581e987aa0d29eed397f61f893bbf234666"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/AntoineToussaint/lazybox/releases/download/v0.1.7/lazybox-tui-x86_64-apple-darwin.tar.xz"
-      sha256 "b017f2a41dbe5bfbdabc4359410077a44cb7f0f33cd98e5963d593438ae01538"
+      url "https://github.com/AntoineToussaint/lazybox/releases/download/v0.1.9/lazybox-tui-boot-x86_64-apple-darwin.tar.xz"
+      sha256 "a381d31d517ea0eb169983200b44050c01d74a30d50f62fd42a7ccae92d68f9f"
     end
   end
   if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/AntoineToussaint/lazybox/releases/download/v0.1.7/lazybox-tui-x86_64-unknown-linux-gnu.tar.xz"
-    sha256 "4295a36f1a7ecbc1e80baa49f7888150bf4b5e618a8636bf332549f9ab26144f"
+    url "https://github.com/AntoineToussaint/lazybox/releases/download/v0.1.9/lazybox-tui-boot-x86_64-unknown-linux-gnu.tar.xz"
+    sha256 "0c92361b07c74b693595f478fecf819b50f42765e1a9dcb3c9b4acb5fd7f134a"
   end
   license "MIT"
 
@@ -40,9 +40,15 @@ class Lazybox < Formula
   end
 
   def install
-    bin.install "lazybox", "lb" if OS.mac? && Hardware::CPU.arm?
-    bin.install "lazybox", "lb" if OS.mac? && Hardware::CPU.intel?
-    bin.install "lazybox", "lb" if OS.linux? && Hardware::CPU.intel?
+    if OS.mac? && Hardware::CPU.arm?
+      bin.install "lazybox", "lb"
+    end
+    if OS.mac? && Hardware::CPU.intel?
+      bin.install "lazybox", "lb"
+    end
+    if OS.linux? && Hardware::CPU.intel?
+      bin.install "lazybox", "lb"
+    end
 
     install_binary_aliases!
 
