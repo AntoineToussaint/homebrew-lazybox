@@ -4,16 +4,16 @@ class Lazybox < Formula
   version "0.1.18"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/AntoineToussaint/lazybox/releases/download/v0.1.18/lazybox-tui-boot-aarch64-apple-darwin.tar.xz"
+      url "https://github.com/AntoineToussaint/lazybox-v1/releases/download/v0.1.18/lazybox-tui-boot-aarch64-apple-darwin.tar.xz"
       sha256 "dc1f04a8a18d6269aef62b0d427bf48c8c5f7332c9ead92c13bbd36b15c77773"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/AntoineToussaint/lazybox/releases/download/v0.1.18/lazybox-tui-boot-x86_64-apple-darwin.tar.xz"
+      url "https://github.com/AntoineToussaint/lazybox-v1/releases/download/v0.1.18/lazybox-tui-boot-x86_64-apple-darwin.tar.xz"
       sha256 "eebb6bf62889ed9379ac8bc2f72c4dc134dc7e8a40bea0f745a9a265664196c6"
     end
   end
   if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/AntoineToussaint/lazybox/releases/download/v0.1.18/lazybox-tui-boot-x86_64-unknown-linux-gnu.tar.xz"
+    url "https://github.com/AntoineToussaint/lazybox-v1/releases/download/v0.1.18/lazybox-tui-boot-x86_64-unknown-linux-gnu.tar.xz"
     sha256 "88ba37b5a0a702e55240f36fbe07d4d374113d7bb607b703d9cc38d4c6b52fa5"
   end
   license "MIT"
